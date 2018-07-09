@@ -1,0 +1,10 @@
+2018-07-06 18:47:24.499894: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-07-06 18:47:25.089175: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: TITAN Xp major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:0c:00.0
+totalMemory: 11.91GiB freeMemory: 11.75GiB
+2018-07-06 18:47:25.089237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-07-06 18:47:25.586710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-06 18:47:25.586765: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-07-06 18:47:25.586776: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-07-06 18:47:25.587191: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11374 MB memory) -> physical GPU (device: 0, name: TITAN Xp, pci bus id: 0000:0c:00.0, compute capability: 6.1)
