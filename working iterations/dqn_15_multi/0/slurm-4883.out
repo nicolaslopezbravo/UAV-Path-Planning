@@ -1,0 +1,11 @@
+2018-07-20 03:19:45.878862: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-07-20 03:19:46.307624: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1344] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:0e:00.0
+totalMemory: 11.17GiB freeMemory: 11.10GiB
+2018-07-20 03:19:46.307667: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1423] Adding visible gpu devices: 0
+2018-07-20 03:19:46.811663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:911] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-07-20 03:19:46.811717: I tensorflow/core/common_runtime/gpu/gpu_device.cc:917]      0 
+2018-07-20 03:19:46.811727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:930] 0:   N 
+2018-07-20 03:19:46.812569: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1041] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10765 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:0e:00.0, compute capability: 3.7)
+slurmstepd: error: *** JOB 4883 ON c1-2 CANCELLED AT 2018-07-20T03:28:39 ***

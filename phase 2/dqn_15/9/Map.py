@@ -16,6 +16,7 @@ class Map(object):
         self.origin = np.array(origin) # starting position [118, 85]
         self.maze_arr = map_file
         self.destination = destination
+        self.benchmark_distance = ((self.destination[0] - self.origin[0])**2 + (self.destination[1] - self.origin[1])**2 )**.5
         self.maze_arr[self.destination[0], self.destination] = 1000
         self.plane = [self.origin[0], self.origin[1]]
         self.iteration = str(iteration)
@@ -73,8 +74,12 @@ class Map(object):
                 table_lookup = ROAD_REWARD  # for roads
             if(table_lookup == 1):
                 table_lookup = BUILDING_REWARD  # for buildings
+
+            dist = self.euclidean(next_coords,goal_coords)
+            if(((-1)*dist) < (1.5*self.benchmark_distance)):
+                dist = 2.77**(dist)
                 
-            reward = table_lookup + self.euclidean(next_coords,goal_coords)
+            reward = table_lookup + dist
             done = False
             # if it diverges stop it
             

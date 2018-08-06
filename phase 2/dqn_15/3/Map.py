@@ -5,8 +5,8 @@ MAZE_H = 300  # grid height
 MAZE_W = 300  # grid width
 MAX_VAL= 1000
 MIN_VAL=-10000
-ROAD_REWARD = -15
-BUILDING_REWARD = 80
+ROAD_REWARD = -1
+BUILDING_REWARD = 1
 
 class Map(object):
     def __init__(self,origin,destination,iteration,map_file):
@@ -16,6 +16,7 @@ class Map(object):
         self.origin = np.array(origin) # starting position [118, 85]
         self.maze_arr = map_file
         self.destination = destination
+        self.benchmark_distance = ((self.destination[0] - self.origin[0])**2 + (self.destination[1] - self.origin[1])**2 )**.5
         self.maze_arr[self.destination[0], self.destination] = 1000
         self.plane = [self.origin[0], self.origin[1]]
         self.iteration = str(iteration)
@@ -73,8 +74,12 @@ class Map(object):
                 table_lookup = ROAD_REWARD  # for roads
             if(table_lookup == 1):
                 table_lookup = BUILDING_REWARD  # for buildings
+
+            dist = self.euclidean(next_coords,goal_coords)
+            if(((-1)*dist) < (1.5*self.benchmark_distance)):
+                dist = 2.77**(dist)
                 
-            reward = table_lookup + self.euclidean(next_coords,goal_coords)
+            reward = table_lookup + dist
             done = False
             # if it diverges stop it
             
@@ -89,5 +94,5 @@ class Map(object):
         goal_x = goal_coord[0]
         goal_y = goal_coord[1]
         dist = ( (goal_x - curr_x)**2 + (goal_y - curr_y)**2 )**.5
-        return 1/((2.7**(dist)+1.0))
+        return -dist
 
