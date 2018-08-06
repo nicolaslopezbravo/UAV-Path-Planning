@@ -1,5 +1,0 @@
-				Astar								DQNt							StraightLine
-Case	Green	Transparent	Red	Total	Green	Transparent	Red	Total	Green	Transparent	Red	Total
-1	18.58	67.57	13.85	296		41.06	51.61	7.33	341		19.18	74.69	6.12	245
-2	31.85	56.51	11.64	292		31.37	44.10	24.53	322		27.78	57.41	14.81	270
-3	25.93	58.47	15.61	378		34.27	51.05	14.69	286		35.37	51.22	13.41	246
