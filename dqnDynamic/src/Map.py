@@ -7,7 +7,7 @@ MAX_VAL= 1000
 MIN_VAL=-10000
 ROAD_REWARD = -1
 BUILDING_REWARD = 1
-
+# this script isn't used as dynamicMap replaces it
 class Map(object):
     def __init__(self,origin,destination,iteration,map_file):
         self.action_space = ['u', 'd', 'l', 'r','ur','rd','ld','ul'] #accounting for diagonals

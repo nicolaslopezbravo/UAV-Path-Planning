@@ -2,7 +2,7 @@ import glob
 import cv2
 import numpy as np
 from findDestinations import findDestinations
-
+# this is a small test to make sure the destinations are correct. it works with the old version of findDestinations and makeDestinationList
 for i in range(1,5):
     img = str(i)
     print("starting iteration", img)

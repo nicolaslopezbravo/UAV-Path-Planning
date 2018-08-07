@@ -25,7 +25,7 @@ class Metrics():
         a_length = sum(Astar)
         dqn_length = sum(DQN)
         sl_length = sum(SL)
-        
+        # this is making it into percentages
         for i in range(len(Astar)):
             Astar[i] /= a_length
             Astar[i] *= 100
@@ -33,7 +33,7 @@ class Metrics():
             DQN[i] *= 100
             SL[i] /= sl_length
             SL[i] *= 100
-        
+        # this is just formatting
         w.write(iteration+"\t") 
         w.write("%.2f\t" % Astar[0])
         w.write("%.2f\t" % Astar[1])
@@ -47,7 +47,7 @@ class Metrics():
         w.write("%.2f\t" % SL[1])
         w.write("%.2f\t" % SL[2])
         w.write("%d\n" % sl_length)
-
+    # this method counts the amount of times the dqn is in an area
     def drawDQN(self,i,map_file):
         filename = str(int(i)-1)+"/" + i +".txt"
         f = open(filename,"r")
@@ -69,7 +69,7 @@ class Metrics():
             else:
                 DQN[2]+= 1
         return DQN
-
+    # this method counts the amount of times the a straight line path is in each area
     def drawSL(self,i,map_file):
         filename = "SL_path/" + i +".txt"
         f = open(filename,"r")
@@ -88,7 +88,7 @@ class Metrics():
                 SL[2]+= 1
             
         return SL
-    
+    # this method counts the amount of times Astar is in an area
     def drawAstar(self,i,map_file):
         # we need i as input
         filename = "Astar_path/"+ i + ".txt"

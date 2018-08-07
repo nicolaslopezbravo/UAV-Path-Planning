@@ -7,7 +7,7 @@ class findDestinations():
         locations = "destinations/"+filename+".txt"
         #locations = filename
         self.transform(locations)
-
+    # transform the file into our formatting
     def transform(self,locations):
         f = open(locations,'r')
         line = f.read()

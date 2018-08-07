@@ -10,6 +10,9 @@ import time
 import numpy as np
 import random
 # Global variables
+# this script doesn't work on cluster because RL shouldn't be a global variable, but this should be transformed into a class
+# using self.RL, as seen in the newer versions. To see an example of it the train.py script contains a working version
+
 MIN_VALUE = -10000
 IMG_SIZE = 300
 action_space = ['u', 'd', 'l', 'r','ur','rd','ld','ul']

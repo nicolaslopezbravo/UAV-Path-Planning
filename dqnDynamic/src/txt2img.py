@@ -12,6 +12,7 @@ map_file[:,0] = MIN_VALUE
 map_file[:,len(map_file)-1]=MIN_VALUE
 map_file[len(map_file)-1,:]=MIN_VALUE
 
+# this script creates a different version of the map
 for i in range(300):
     for j in range(300):
         if map_file[i,j]== 0:

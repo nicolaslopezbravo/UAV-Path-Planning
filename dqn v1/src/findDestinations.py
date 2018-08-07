@@ -6,7 +6,7 @@ class findDestinations():
     def __init__(self,filename):
         locations = "../destinations/"+filename+".txt"
         self.transform(locations)
-
+    # transforms location formatting
     def transform(self,locations):
         f = open(locations,'r')
         line = f.read()

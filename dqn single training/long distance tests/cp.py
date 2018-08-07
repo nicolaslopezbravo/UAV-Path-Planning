@@ -1,5 +1,6 @@
 import shutil
 import os
+# this script copies and pastes files into other folders from 0-15
 filePath = input("Name of file to copy i.e '0/DQN.py': ")
 from_files = int(input("starting range of files to copy it to i.e 1: "))
 to_files = int(input("ending range of files to copy it to i.e 15: "))

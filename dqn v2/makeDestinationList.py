@@ -3,6 +3,8 @@ import numpy as np
 import cv2
 import glob
 import math
+#   this script takes the output generated from the matlab code and transforms it into what we need
+#   matlab code has been modified to be used, however the matlab code is ridiculously large so it was not uploaded.
 class findDestinations():
     def __init__(self,filename):
         starting_location_path = "starting_locations/"+filename+".txt"

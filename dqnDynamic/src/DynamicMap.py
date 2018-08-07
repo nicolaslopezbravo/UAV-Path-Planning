@@ -13,7 +13,7 @@ MIN_VAL=-10000
 ROAD_REWARD = -1
 CAR_REWARD = -2
 BUILDING_REWARD = 1
-
+# class car for synthetically generated data, however real data exists in the path planning folder of the matlab code
 class Car():
     def __init__(self,x,y):
         self.x = x
@@ -157,6 +157,7 @@ class DynamicMap(object):
             dist = self.euclidean(next_coords,goal_coords)
             if(((-1)*dist) < self.benchmark_distance):
                 dist = 2.77**(dist)
+            # calculating the reward function
             reward = table_lookup + (dist/(MAZE_H*UNIT)) # do some cases with h*w
             done = False
 
