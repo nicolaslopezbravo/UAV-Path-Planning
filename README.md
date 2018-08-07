@@ -11,3 +11,5 @@
   Contains previous versions with attemepts to separate training and testing data, and individual training as well
 ## synthetic data generation: ##
   Contains the very important generateImages.py script and input testing files for making destination lists from the matlab code
+## matlab code: ##
+  Contains scripts I changed in the matlab code, it does not contain the entire code as it is very large. The folders outputEnd,outputStart, and outputGroundTruth must be created for it to work
