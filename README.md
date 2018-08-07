@@ -1,4 +1,4 @@
-# Deep Reinfocement Learning vs A* on UAV Path Planning #
+# Deep Reinforcement Learning vs A* on UAV Path Planning #
 ### This is a Deep Reinforcement Learning approach to the problem described in the PDF File ###
 
 ## dqn single training: ## 
